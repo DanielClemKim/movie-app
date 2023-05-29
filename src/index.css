@@ -165,7 +165,7 @@ html {
   border-radius: 20px;
   transition: all 200ms ease-in-out;
 }
-.movie .image:hover {
+.movie .image:focus {
   box-shadow: 5px 5px 3px 2px grey;
   transform: translateX(-4px) translateY(4px);
 }
@@ -277,5 +277,13 @@ html {
   }
   .genre {
     font-size: 0.8rem;
+  }
+  .movie .image:hover {
+    box-shadow: 5px 5px 3px 2px grey;
+    transform: translateX(-4px) translateY(4px);
+  }
+  .detail .image:hover {
+    box-shadow: none;
+    transform: none;
   }
 }
