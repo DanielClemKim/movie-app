@@ -150,7 +150,7 @@ html {
   text-align: center;
   text-transform: uppercase;
   margin: 2vh auto 6vh;
-  min-height: 100vh;
+  min-height: 200vh;
 }
 .movie {
   border-bottom: 1px solid #e1f1ff;
@@ -164,10 +164,6 @@ html {
   margin-bottom: 25px;
   border-radius: 20px;
   transition: all 200ms ease-in-out;
-}
-.movie .image:focus {
-  box-shadow: 5px 5px 3px 2px grey;
-  transform: translateX(-4px) translateY(4px);
 }
 .detail {
   background-color: white;
@@ -183,10 +179,6 @@ html {
   width: 300px;
   max-width: 100%;
   border-radius: 20px;
-}
-.detail .image:hover {
-  box-shadow: none;
-  transform: none;
 }
 .movie .title {
   font-weight: 700;
