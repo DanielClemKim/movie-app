@@ -45,11 +45,12 @@ function Movie({ id, coverImg, title, summary, genres, detailOff, year }) {
 }
 
 Movie.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
   title: PropTypes.string.isRequired,
   coverImg: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+  year: PropTypes.number.isRequired,
 };
 
 export default Movie;

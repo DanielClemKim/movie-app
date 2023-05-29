@@ -26,7 +26,6 @@ function Detail() {
         </div>
       ) : (
         <Movie
-          key={movie.id}
           coverImg={movie.medium_cover_image}
           title={movie.title}
           summary={movie.description_intro}
