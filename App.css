@@ -139,8 +139,14 @@ table {
   color: black;
   font-weight: 700;
   letter-spacing: 1px;
-  line-height: 2.5;
   font-size: 40px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.year {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 .summary {
   font-size: 18px;
