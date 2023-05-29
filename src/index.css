@@ -2,7 +2,6 @@
   v2.0 | 20110126
   License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -127,11 +126,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-* {
-  font-family: "Open Sans", sans-serif;
-}
-.html {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+html {
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 .App {
   background-color: white;
@@ -188,14 +187,14 @@ table {
   transform: none;
 }
 .movie .title {
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   font-size: 1.5rem;
   margin-bottom: 25px;
 }
 .description .title {
   font-size: 2rem;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .year {
   font-size: 1rem;
@@ -210,7 +209,7 @@ table {
   color: #0081a7;
 }
 .genre {
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   font-size: 1rem;
   line-height: 1.5;
@@ -253,6 +252,7 @@ table {
   .movie {
     width: 26%;
     border-bottom: none;
+    padding: 25px 25px;
   }
   .detail {
     flex-flow: row;
@@ -262,6 +262,7 @@ table {
   }
   .detail .image {
     width: 40%;
+    margin-bottom: 0;
   }
   .detail .description {
     width: 50%;
@@ -271,5 +272,8 @@ table {
     font-size: 1.5rem;
     width: 60px;
     height: 60px;
+  }
+  .genre {
+    font-size: 0.8rem;
   }
 }
