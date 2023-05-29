@@ -126,6 +126,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
 html {
@@ -149,6 +150,7 @@ html {
   text-align: center;
   text-transform: uppercase;
   margin: 2vh auto 6vh;
+  min-height: 100vh;
 }
 .movie {
   border-bottom: 1px solid #e1f1ff;
@@ -243,7 +245,7 @@ html {
   margin: 45vh auto 45vh;
   font-size: 3rem;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .home {
     flex-flow: row wrap;
     justify-content: space-around;
