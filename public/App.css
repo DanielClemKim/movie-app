@@ -1,0 +1,187 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.title {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 3.5;
+  font-size: 20px;
+}
+.title2 {
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 2.5;
+  font-size: 40px;
+}
+.summary {
+  font-size: 18px;
+  font-weight: 500;
+}
+.movie {
+  border-bottom: 1px solid #e1f1ff;
+  margin-top: 30px;
+}
+.movie:last-child {
+  border-bottom: none;
+}
+.detail {
+  text-align: left;
+}
+.img {
+  margin-bottom: 10px;
+  max-width: 100%;
+  border-radius: 20px;
+  transition: all 200ms ease-in-out;
+}
+.img2 {
+  margin-bottom: 10px;
+  max-width: 30%;
+  border-radius: 20px;
+  box-shadow: 10px 5px 5px grey;
+}
+.genres {
+  margin: 50px 0;
+  color: #0081a7;
+}
+.genre {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 15px 0;
+  border-top: 1px solid #e1f1ff;
+}
+.img:hover {
+  box-shadow: 10px 5px 10px grey;
+  transform: translate(-0.25em);
+  cursor: pointer;
+}

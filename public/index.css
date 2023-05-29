@@ -1,0 +1,10 @@
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  background-color: #edede9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
