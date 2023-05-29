@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function Movie({ id, coverImg, title, summary, genres, detailOff }) {
+function Movie({ id, coverImg, title, summary, genres, detailOff, year }) {
   return (
     <div className="movie">
       {detailOff ? (
@@ -19,7 +19,10 @@ function Movie({ id, coverImg, title, summary, genres, detailOff }) {
         <div className="detail">
           <img src={coverImg} alt={title} className="img2" />
           <h2 className="title2">{title}</h2>
-          <p className="summary">{summary}</p>
+          <h3 className="year">{year}</h3>
+          <p className="summary">
+            {summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}
+          </p>
           <ul className="genres">
             {genres.map((g) => (
               <li key={g} className="genre">

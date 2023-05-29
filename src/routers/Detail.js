@@ -19,7 +19,7 @@ function Detail() {
   return (
     <div className="panel">
       {loading ? (
-        <h1 className="load">Loading...</h1>
+        <h1>Loading...</h1>
       ) : (
         <Movie
           key={movie.id}
@@ -28,6 +28,7 @@ function Detail() {
           title={movie.title}
           summary={movie.description_intro}
           genres={movie.genres}
+          year={movie.year}
           detailOff={false}
         />
       )}
