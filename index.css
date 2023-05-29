@@ -144,19 +144,16 @@ table {
   border-radius: 20px;
   box-shadow: 5px 5px 10px 5px #edede9;
   padding: 15px 25px;
-  width: 100%;
   max-width: 960px;
   display: flex;
   flex-direction: column;
   text-align: center;
   text-transform: uppercase;
-  margin: 2vh auto 2vh;
+  margin: 2vh auto 6vh;
 }
 .movie {
   border-bottom: 1px solid #e1f1ff;
   margin-bottom: 40px;
-  width: 100%;
-  max-width: 960px;
 }
 .movie:last-child {
   border-bottom: none;
@@ -164,7 +161,6 @@ table {
 }
 .movie .image {
   margin-bottom: 25px;
-  max-width: 100%;
   border-radius: 20px;
   transition: all 200ms ease-in-out;
 }
@@ -179,14 +175,13 @@ table {
   padding: 25px 35px;
   display: flex;
   flex-direction: column;
-  margin: 5vh auto 5vh;
+  margin: 2vh auto 6vh;
 }
 .detail .image {
   margin-bottom: 25px;
   width: 300px;
   max-width: 100%;
   border-radius: 20px;
-  display: inline;
 }
 .detail .image:hover {
   box-shadow: none;
@@ -231,9 +226,9 @@ table {
 }
 .btn {
   border: none;
-  font-size: 1.5rem;
-  width: 60px;
-  height: 60px;
+  font-size: 1rem;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   position: fixed;
   top: 60px;
@@ -248,4 +243,33 @@ table {
 .load {
   margin: 45vh auto 45vh;
   font-size: 3rem;
+}
+@media screen and (min-width: 900px) {
+  .home {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 2vh auto 2vh;
+  }
+  .movie {
+    width: 26%;
+    border-bottom: none;
+  }
+  .detail {
+    flex-flow: row;
+    align-items: center;
+    width: 960px;
+    margin: 6vh auto 6vh;
+  }
+  .detail .image {
+    width: 40%;
+  }
+  .detail .description {
+    width: 50%;
+    margin-left: 50px;
+  }
+  .btn {
+    font-size: 1.5rem;
+    width: 60px;
+    height: 60px;
+  }
 }
