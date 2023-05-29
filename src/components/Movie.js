@@ -1,35 +1,43 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 function Movie({ id, coverImg, title, summary, genres, detailOff, year }) {
+  const navigate = useNavigate();
   return (
     <div className="movie">
       {detailOff ? (
-        <div className="main">
+        <div>
           <Link to={`/movie/${id}`}>
-            <img src={coverImg} alt={title} className="img" />
+            <img src={coverImg} alt={title} className="image" />
           </Link>
-          <h2>
-            <Link to={`/movie/${id}`} className="title">
+          <h2 className="title">
+            <Link to={`/movie/${id}`} className="link">
               {title}
             </Link>
           </h2>
         </div>
       ) : (
         <div className="detail">
-          <img src={coverImg} alt={title} className="img2" />
-          <h2 className="title2">{title}</h2>
-          <h3 className="year">{year}</h3>
-          <p className="summary">
-            {summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}
-          </p>
-          <ul className="genres">
-            {genres.map((g) => (
-              <li key={g} className="genre">
-                {g}
-              </li>
-            ))}
-          </ul>
+          <button className="btn" onClick={() => navigate(-1)}>
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <img src={coverImg} alt={title} className="image" />
+          <div className="description">
+            <h2 className="title">{title}</h2>
+            <h3 className="year">{year}</h3>
+            <p className="summary">
+              {summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}
+            </p>
+            <ul className="genres">
+              {genres.map((g) => (
+                <li key={g} className="genre">
+                  {g}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>

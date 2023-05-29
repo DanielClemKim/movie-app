@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import Movie from "../components/Movie";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -17,18 +19,22 @@ function Home() {
     getMovies();
   }, []);
   return (
-    <div className="panel">
+    <div>
       {loading ? (
-        <h1>Loading...</h1>
+        <div className="load">
+          <FontAwesomeIcon icon={faSpinner} fade />
+        </div>
       ) : (
-        movies.map((movie) => (
-          <Movie
-            id={movie.id}
-            coverImg={movie.medium_cover_image}
-            title={movie.title}
-            detailOff={true}
-          />
-        ))
+        <div className="home">
+          {movies.map((movie) => (
+            <Movie
+              id={movie.id}
+              coverImg={movie.medium_cover_image}
+              title={movie.title}
+              detailOff={true}
+            />
+          ))}
+        </div>
       )}
     </div>
   );

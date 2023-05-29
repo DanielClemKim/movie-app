@@ -1,6 +1,8 @@
 import { useEffect, useState, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import Movie from "../components/Movie";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 function Detail() {
   const { id } = useParams();
@@ -17,9 +19,11 @@ function Detail() {
     getMovie();
   }, [getMovie]);
   return (
-    <div className="panel">
+    <div>
       {loading ? (
-        <h1>Loading...</h1>
+        <div className="load">
+          <FontAwesomeIcon icon={faSpinner} fade />
+        </div>
       ) : (
         <Movie
           key={movie.id}
