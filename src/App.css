@@ -194,7 +194,7 @@ html {
 .movie-detail .image {
   margin-bottom: 25px;
   border-radius: 20px;
-  width: 300px;
+  width: 100%;
 }
 .movie-detail .title {
   font-weight: 700;
