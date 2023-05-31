@@ -126,7 +126,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
 html {
@@ -143,50 +142,62 @@ html {
   background-color: white;
   border-radius: 20px;
   box-shadow: 5px 5px 10px 5px #edede9;
+  text-align: center;
   padding: 15px 25px;
-  max-width: 960px;
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  text-transform: uppercase;
   margin: 2vh auto 6vh;
   min-height: 200vh;
 }
-.movie {
-  border-bottom: 1px solid #e1f1ff;
-  margin-bottom: 40px;
+.load {
+  margin: 45vh auto 45vh;
+  font-size: 3rem;
 }
-.movie:last-child {
+.movie-home {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e1f1ff;
+  width: 100%;
+  max-width: 450px;
+}
+.movie-home:last-child {
   border-bottom: none;
   margin-bottom: 0;
 }
-.movie .image {
+.movie-home .image {
   margin-bottom: 25px;
   border-radius: 20px;
+  width: 45%;
   transition: all 200ms ease-in-out;
 }
-.detail {
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 5px 5px 10px 5px #edede9;
-  padding: 25px 35px;
-  display: flex;
-  flex-direction: column;
-  margin: 2vh auto 6vh;
-}
-.detail .image {
-  margin-bottom: 25px;
-  width: 300px;
-  max-width: 100%;
-  border-radius: 20px;
-}
-.movie .title {
+.movie-home .title {
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 1.5rem;
   margin-bottom: 25px;
 }
-.description .title {
+.link {
+  color: black;
+  text-decoration: none;
+}
+.movie-detail {
+  background-color: white;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px 5px #edede9;
+  padding: 25px 35px;
+  margin: 2vh auto 6vh;
+  display: flex;
+  flex-direction: column;
+}
+.movie-detail .image {
+  margin-bottom: 25px;
+  border-radius: 20px;
+  width: 50%;
+}
+.movie-detail .title {
+  font-weight: 700;
   font-size: 2rem;
   margin-bottom: 10px;
 }
@@ -213,69 +224,65 @@ html {
 .genre:last-child {
   border-bottom: 1px solid #e1f1ff;
 }
-.link {
-  color: black;
-  text-decoration: none;
-}
+
 .btn {
   border: none;
   font-size: 1rem;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   position: fixed;
   top: 60px;
   right: 30px;
+  border-radius: 50%;
   background-color: white;
   box-shadow: 5px 5px 3px 1px #edede9;
   transition: all 100ms ease-in-out;
 }
+
 .btn:hover {
   background-color: #e5e5e5;
 }
-.load {
-  margin: 45vh auto 45vh;
-  font-size: 3rem;
-}
+
 @media screen and (min-width: 960px) {
   .home {
     flex-flow: row wrap;
-    justify-content: space-around;
+    max-width: 960px;
     margin: 2vh auto 2vh;
+    justify-content: space-around;
   }
-  .movie {
+  .movie-home {
     width: 26%;
     border-bottom: none;
     padding: 25px 25px;
   }
-  .detail {
-    flex-flow: row;
+  .movie-home .image {
+    width: 80%;
+  }
+  .movie-detail {
+    max-width: 960px;
+    flex-direction: row;
     align-items: center;
-    width: 960px;
     margin: 6vh auto 6vh;
   }
-  .detail .image {
+  .movie-detail .image {
     width: 40%;
     margin-bottom: 0;
+    margin-right: 50px;
   }
-  .detail .description {
-    width: 50%;
-    margin-left: 50px;
+  .description {
+    width: 60%;
+  }
+  .genre {
+    font-size: 0.8rem;
   }
   .btn {
     font-size: 1.5rem;
     width: 60px;
     height: 60px;
   }
-  .genre {
-    font-size: 0.8rem;
-  }
-  .movie .image:hover {
+
+  .movie-home .image:hover {
     box-shadow: 5px 5px 3px 2px grey;
     transform: translateX(-4px) translateY(4px);
-  }
-  .detail .image:hover {
-    box-shadow: none;
-    transform: none;
   }
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
@@ -18,28 +18,21 @@ function Home() {
   useEffect(() => {
     getMovies();
   }, []);
-  return (
-    <div>
-      {loading ? (
-        <div className="load">
-          <FontAwesomeIcon icon={faSpinner} fade />
-        </div>
-      ) : (
-        <div className="home">
-          {movies.map((movie) => (
-            <Movie
-              key={movie.id}
-              id={movie.id}
-              coverImg={movie.medium_cover_image}
-              title={movie.title}
-              summary={""}
-              genres={[]}
-              year={0}
-              detailOff={true}
-            />
-          ))}
-        </div>
-      )}
+  return loading ? (
+    <div className="load">
+      <FontAwesomeIcon icon={faSpinner} fade />
+    </div>
+  ) : (
+    <div className="home">
+      {movies.map((movie) => (
+        <Movie
+          key={movie.id}
+          id={movie.id}
+          title={movie.title}
+          coverImg={movie.medium_cover_image}
+          detailOff={true}
+        />
+      ))}
     </div>
   );
 }
