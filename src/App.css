@@ -167,7 +167,7 @@ html {
 .movie-home .image {
   margin-bottom: 25px;
   border-radius: 20px;
-  width: 45%;
+  width: 70%;
   transition: all 200ms ease-in-out;
 }
 .movie-home .title {
@@ -239,6 +239,17 @@ html {
   transition: all 100ms ease-in-out;
 }
 
+.btn.left {
+  top: 60px;
+  left: 20px;
+  box-shadow: none;
+}
+.btn.right {
+  top: 60px;
+  right: 20px;
+  box-shadow: none;
+}
+
 .btn:hover {
   background-color: #e5e5e5;
 }
@@ -251,18 +262,18 @@ html {
     justify-content: space-around;
   }
   .movie-home {
-    width: 26%;
+    width: 40%;
     border-bottom: none;
     padding: 25px 25px;
   }
   .movie-home .image {
-    width: 80%;
+    width: 100%;
   }
   .movie-detail {
     max-width: 960px;
     flex-direction: row;
     align-items: center;
-    margin: 6vh auto 6vh;
+    margin: 14vh auto 14vh;
   }
   .movie-detail .image {
     width: 40%;

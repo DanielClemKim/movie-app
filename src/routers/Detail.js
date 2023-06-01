@@ -1,33 +1,50 @@
 import { useEffect, useState, useCallback } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Movie from "../components/Movie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 function Detail() {
-  const { id } = useParams();
+  const { program, id } = useParams();
   const [loading, setLoading] = useState(true);
   const [movie, setMovie] = useState([]);
+  const navigate = useNavigate();
+
   const getMovie = useCallback(async () => {
     const json = await (
-      await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+      await fetch(
+        `https://api.themoviedb.org/3/${program}/${id}?api_key=5f05774ba4241386488bc7ad7b16cf4d`
+      )
     ).json();
-    setMovie(json.data.movie);
+    setMovie(json);
     setLoading(false);
-  }, [id]);
+  }, [program, id]);
   useEffect(() => {
     getMovie();
   }, [getMovie]);
+
+  useEffect(() => {
+    const handleBackNavigation = () => {
+      navigate(-1);
+    };
+    window.addEventListener("popstate", handleBackNavigation);
+
+    return () => {
+      window.removeEventListener("popstate", handleBackNavigation);
+    };
+  }, [navigate]);
+
   return loading ? (
     <div className="load">
       <FontAwesomeIcon icon={faSpinner} fade />
     </div>
   ) : (
     <Movie
-      title={movie.title}
-      coverImg={movie.medium_cover_image}
-      year={movie.year}
-      summary={movie.description_intro}
+      id={movie.id}
+      title={movie.title || movie.name}
+      coverImg={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+      year={movie.first_air_date || movie.release_date}
+      summary={movie.overview}
       genres={movie.genres}
       detailOff={false}
     />
