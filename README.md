@@ -1,21 +1,21 @@
 # Movie app
 
-## :rabbit: Link
+## Link
 
 You can check the page from below link. <br>
 https://danielclemkim.github.io/movie-app
 
-## :rabbit: Movie app using React ⚛️
+## Movie app using React ⚛️
 
 This is a Movie app that can be used as searching for movie title, overview and genres etc..
 I am using React when I made this app.
 
-## :rabbit: Feature
+## Feature
 
 1. If you want to see more details of the movies, then just click the titles or poster images.
 2. There's no movies you are interesting at? Just click the right-top button. You could see the page of another movie lists.
 
-## :rabbit: Example Page
+## Example Page
 
 Main Page 🔽 <br>
 
